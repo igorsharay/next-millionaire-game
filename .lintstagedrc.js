@@ -5,8 +5,8 @@ const buildEslintCommand = (filenames) =>
 
 module.exports = {
   // Type check TypeScript files
-  '/src/*/.(ts|tsx)': () => 'npm tsc --noEmit',
-  '/src/*.{js,jsx,ts,tsx,json,md,prettierrc,css,scss}':
+  './src/*/.(ts|tsx)': () => 'npm tsc --noEmit',
+  './src/*.{js,jsx,ts,tsx,json,md,prettierrc,css,scss}':
     'prettier --write --config .prettierrc.json',
-  '/src/*.{js,jsx,ts,tsx}': [buildEslintCommand],
+  './src/*.{js,jsx,ts,tsx}': [buildEslintCommand],
 };
