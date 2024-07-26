@@ -7,11 +7,18 @@
   "globals": {
     "React": true
   },
-  "extends": ["airbnb", "prettier", "eslint:recommended", "next/core-web-vitals"],
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "prettier",
+    "next/core-web-vitals"
+  ],
   "parserOptions": {
     "ecmaVersion": 12,
     "sourceType": "module",
-    "ecmaFeatures": { "jsx": true }
+    "ecmaFeatures": { "jsx": true },
+    "project": "./tsconfig.json"
   },
   "plugins": ["prettier"],
   "rules": {
@@ -39,6 +46,7 @@
     "react/require-default-props": "off", // let it handle by TypeScript
     "nonblock-statement-body-position": "off", // let it handle by prettier
     "react/jsx-one-expression-per-line": "off", // let it handle by prettier
-    "no-unused-expressions": "off"
+    "no-unused-expressions": "off",
+    "no-plusplus": "off"
   }
 }

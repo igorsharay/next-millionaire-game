@@ -34,18 +34,27 @@ function AnswersList({ answers }: AnswersListProps) {
       return <div>No answers</div>;
     }
 
-    return answers.map((item: Answer, index: number) => (
-      <AnswerItem
-        key={getLetter(index)}
-        letter={getLetter(index)}
-        text={item.text}
-        isActive={selectedAnswer.includes(index)}
-        {...(!isClickable ? { isCorrect: selectedAnswer.includes(index) && item.isCorrect } : {})}
-        {...(isClickable && !selectedAnswer.includes(index)
-          ? { clickHandler: () => clickAnswerHandler(index) }
-          : {})}
-      />
-    ));
+    return answers.map((item: Answer, index: number) => {
+      const isCorrectProp = !isClickable
+        ? selectedAnswer.includes(index) && item.isCorrect
+        : undefined;
+
+      const clickHandlerProp =
+        isClickable && !selectedAnswer.includes(index)
+          ? () => clickAnswerHandler(index)
+          : undefined;
+
+      return (
+        <AnswerItem
+          key={getLetter(index)}
+          letter={getLetter(index)}
+          text={item.text}
+          isActive={selectedAnswer.includes(index)}
+          isCorrect={isCorrectProp}
+          clickHandler={clickHandlerProp}
+        />
+      );
+    });
   }, [answers, selectedAnswer, isClickable, clickAnswerHandler]);
 
   return <div className={styles.answersList}>{renderAnswers}</div>;

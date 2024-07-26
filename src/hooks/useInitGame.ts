@@ -9,15 +9,8 @@ interface GameInitProps {
   prizeMultiplier: number;
 }
 
-export const useInitGame = ({
-  questions,
-  questionsPerGame,
-  prize,
-  prizeMultiplier,
-}: GameInitProps) => {
-  const {
-    setPrize, setPrizeMultiplier, setQuestions, setQuestionsPerGame,
-  } = useGameConfig();
+const useInitGame = ({ questions, questionsPerGame, prize, prizeMultiplier }: GameInitProps) => {
+  const { setPrize, setPrizeMultiplier, setQuestions, setQuestionsPerGame } = useGameConfig();
 
   useEffect(() => {
     setPrize(prize);
@@ -35,3 +28,5 @@ export const useInitGame = ({
     setQuestions,
   ]);
 };
+
+export default useInitGame;

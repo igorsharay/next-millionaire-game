@@ -3,7 +3,7 @@ import { useGame } from '@/context/GameContext';
 import { getGameQuestions, randomizeQuestionsAnswers } from '@/helpers/questionsHelper';
 import { useEffect } from 'react';
 
-export const useSetGameQuestions = () => {
+const useSetGameQuestions = () => {
   const { questions, questionsPerGame } = useGameConfig();
   const { setGameQuestions } = useGame();
 
@@ -13,3 +13,5 @@ export const useSetGameQuestions = () => {
     setGameQuestions(randomizeQuestionsAnswers(gameQuestions));
   }, [setGameQuestions, questions, questionsPerGame]);
 };
+
+export default useSetGameQuestions;

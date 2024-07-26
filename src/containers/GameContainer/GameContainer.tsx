@@ -4,7 +4,7 @@ import GameOverScreen from '@/components/GameOverScreen/GameOverScreen';
 import GameScreen from '@/components/GameScreen/GameScreen';
 import StartGameScreen from '@/components/StartGameScreen/StartGameScreen';
 import { useGame } from '@/context/GameContext';
-import { useInitGame } from '@/hooks/useInitGame';
+import useInitGame from '@/hooks/useInitGame';
 import { Question } from '@/types';
 
 interface GameContainerProps {
@@ -23,7 +23,10 @@ const GameContainer: React.FC<GameContainerProps> = ({
   const { isGameStarted, isGameOver } = useGame();
 
   useInitGame({
-    questions, questionsPerGame, prize, prizeMultiplier,
+    questions,
+    questionsPerGame,
+    prize,
+    prizeMultiplier,
   });
 
   if (!isGameStarted) {

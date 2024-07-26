@@ -1,7 +1,7 @@
 'use client';
 
 import { Question } from '@/types';
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useMemo, useState } from 'react';
 
 interface GameConfigContextType {
   prize: number;
@@ -26,22 +26,21 @@ export const GameConfigProvider: React.FC<GameConfigProviderProps> = ({ children
   const [questionsPerGame, setQuestionsPerGame] = useState(0);
   const [questions, setQuestions] = useState<Array<Question>>([]);
 
-  return (
-    <GameConfigContext.Provider
-      value={{
-        prize,
-        prizeMultiplier,
-        questions,
-        questionsPerGame,
-        setPrize,
-        setPrizeMultiplier,
-        setQuestions,
-        setQuestionsPerGame,
-      }}
-    >
-      {children}
-    </GameConfigContext.Provider>
+  const value = useMemo(
+    () => ({
+      prize,
+      prizeMultiplier,
+      questions,
+      questionsPerGame,
+      setPrize,
+      setPrizeMultiplier,
+      setQuestions,
+      setQuestionsPerGame,
+    }),
+    [prize, prizeMultiplier, questions, questionsPerGame],
   );
+
+  return <GameConfigContext.Provider value={value}>{children}</GameConfigContext.Provider>;
 };
 
 export const useGameConfig = () => {

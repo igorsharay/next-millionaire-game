@@ -17,33 +17,37 @@ const AnswerItem: React.FC<AnswerItemProps> = ({
   isCorrect,
   clickHandler,
 }) => {
-  const stateClasses = useMemo(
-    () => (isCorrect !== undefined ? (isCorrect ? styles.correct : styles.wrong) : ''),
-    [isCorrect],
-  );
+  const stateClasses = useMemo(() => {
+    if (isCorrect !== undefined) {
+      return isCorrect ? styles.correct : styles.wrong;
+    }
 
-  const clickEvents = useMemo(
-    () => ({
-      ...(!isActive && clickHandler
-        ? {
-          onClick: clickHandler,
-          onKeyDown: (e: KeyboardEvent<HTMLDivElement>) => {
-            if (e.code === '13') {
-              clickHandler();
-            }
-          },
-        }
-        : {}),
-    }),
+    return '';
+  }, [isCorrect]);
+
+  const onClickProp = useMemo(
+    () => (!isActive && clickHandler ? clickHandler : undefined),
     [clickHandler, isActive],
   );
+
+  const onKeyDownProp = useMemo(() => {
+    if (!isActive && clickHandler) {
+      return (e: KeyboardEvent<HTMLDivElement>) => {
+        if (e.code === '13') {
+          clickHandler();
+        }
+      };
+    }
+    return undefined;
+  }, [clickHandler, isActive]);
 
   return (
     <div
       role="button"
       tabIndex={-1}
       className={`${styles.answerItem} ${isActive ? `${styles.active} ${stateClasses}` : ''}`}
-      {...clickEvents}
+      onClick={onClickProp}
+      onKeyDown={onKeyDownProp}
     >
       <AnswerImage className={styles.answerBgImage} />
       <div className={styles.answerText}>

@@ -1,7 +1,7 @@
 'use client';
 
 import { Question } from '@/types';
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useMemo, useState } from 'react';
 
 interface GameContextType {
   isGameStarted: boolean;
@@ -48,25 +48,24 @@ export const GameProvider: React.FC<GameProviderProps> = ({ children }) => {
     setGameQuestions([]);
   };
 
-  return (
-    <GameContext.Provider
-      value={{
-        isGameStarted,
-        isGameOver,
-        earnedAmount,
-        currentLevel,
-        gameQuestions,
-        setEarnedAmount,
-        setCurrentLevel,
-        setGameQuestions,
-        startGame,
-        endGame,
-        resetGame,
-      }}
-    >
-      {children}
-    </GameContext.Provider>
+  const value = useMemo(
+    () => ({
+      isGameStarted,
+      isGameOver,
+      earnedAmount,
+      currentLevel,
+      gameQuestions,
+      setEarnedAmount,
+      setCurrentLevel,
+      setGameQuestions,
+      startGame,
+      endGame,
+      resetGame,
+    }),
+    [currentLevel, earnedAmount, gameQuestions, isGameOver, isGameStarted],
   );
+
+  return <GameContext.Provider value={value}>{children}</GameContext.Provider>;
 };
 
 export const useGame = () => {

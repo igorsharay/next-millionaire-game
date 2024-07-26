@@ -3,7 +3,7 @@
 import AnswersList from '@/components/AnswersList/AnswersList';
 import LevelsList from '@/components/LevelsList/LevelsList';
 import { useGame } from '@/context/GameContext';
-import { useSetGameQuestions } from '@/hooks/useSetGameQuestions';
+import useSetGameQuestions from '@/hooks/useSetGameQuestions';
 import useWindowDimensions from '@/hooks/useWindowDimentions';
 import { useState } from 'react';
 import ShowLevelsButton from '../ShowLevelsButton/ShowLevelsButton';

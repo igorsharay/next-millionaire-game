@@ -14,7 +14,7 @@ export const shuffle = (array: unknown[]) => {
 
   while (currentIndex !== 0) {
     const randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
+    currentIndex -= 1;
 
     [shuffled[currentIndex], shuffled[randomIndex]] = [
       shuffled[randomIndex],

@@ -17,7 +17,7 @@ export const useCheckAnswer = (delay: number) => {
     const answers = gameQuestions[currentLevel]?.answers || [];
     const isAllAnswersSelected = getCorrectAnswersCount(answers) === selectedAnswer.length;
 
-    if (isAllAnswersSelected)
+    if (isAllAnswersSelected) {
       timeout = setTimeout(() => {
         if (checkCorrectAnswers(answers, selectedAnswer)) {
           const newAmount = earnedAmount > 0 ? earnedAmount * prizeMultiplier : prize;
@@ -34,9 +34,12 @@ export const useCheckAnswer = (delay: number) => {
           endGame();
         }
       }, delay);
+    }
 
     return () => {
-      timeout && clearTimeout(timeout);
+      if (timeout) {
+        clearTimeout(timeout);
+      }
     };
   }, [
     selectedAnswer,
