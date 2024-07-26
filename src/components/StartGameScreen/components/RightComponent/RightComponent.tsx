@@ -13,7 +13,9 @@ function RightComponent() {
 
   return (
     <>
-      <h1>Who wants to be a millionaire?</h1>
+      <h1>
+        Who wants to be <span className={styles.titlePart}>a millionaire?</span>
+      </h1>
       <div className={styles.btnContainer}>
         <Button clickHandler={startGameHandler}>Start</Button>
       </div>

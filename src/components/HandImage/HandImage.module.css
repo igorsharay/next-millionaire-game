@@ -5,8 +5,9 @@
   align-self: flex-end;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .image {
-    max-height: 300px;
+    max-height: 192px;
+    align-self: center;
   }
 }

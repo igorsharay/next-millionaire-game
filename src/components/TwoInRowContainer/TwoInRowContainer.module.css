@@ -16,15 +16,9 @@
 }
 
 @media (max-width: 1024px) {
-  .half {
-    flex-basis: calc(50% - (32px / 2));
-  }
-}
-
-@media (max-width: 768px) {
   .container {
     align-items: stretch;
-    gap: 32px;
+    gap: 56px;
   }
 
   .half {

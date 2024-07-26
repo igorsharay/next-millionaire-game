@@ -1,11 +1,10 @@
 'use client';
 
-import AnswersList from '@/components/AnswersList/AnswersList';
 import LevelsList from '@/components/LevelsList/LevelsList';
-import { useGame } from '@/context/GameContext';
+import Question from '@/components/Question/Question';
 import useSetGameQuestions from '@/hooks/useSetGameQuestions';
 import useWindowDimensions from '@/hooks/useWindowDimentions';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import ShowLevelsButton from '../ShowLevelsButton/ShowLevelsButton';
 import styles from './GameScreen.module.css';
 
@@ -14,37 +13,34 @@ const showLevelsFromWidth = 1024;
 function GameScreen() {
   const [isShowLevels, setIsShowLevels] = useState(false);
   const { width } = useWindowDimensions();
-  const { gameQuestions, currentLevel } = useGame();
 
   useSetGameQuestions();
+
+  const levelsListClasses = `${styles.levelsListContainer} ${
+    width <= showLevelsFromWidth ? styles.mobLevelsListContainer : ''
+  }`;
+
+  const isRenderLevelsBtn = useMemo(() => width <= showLevelsFromWidth, [width]);
+
+  const isRenderLevels = useMemo(
+    () => width > showLevelsFromWidth || isShowLevels,
+    [isShowLevels, width],
+  );
 
   return (
     <div className={styles.container}>
       <div className={styles.questionOuterContainer}>
-        {width <= showLevelsFromWidth ? (
+        {isRenderLevelsBtn && (
           <ShowLevelsButton
             isShowLevels={isShowLevels}
             clickHandler={() => setIsShowLevels((prev) => !prev)}
           />
-        ) : null}
+        )}
 
-        <div className={styles.questionContainer}>
-          <div className={styles.question}>
-            <h4>{gameQuestions.length ? gameQuestions[currentLevel].text : 'No questions'}</h4>
-          </div>
-          <div className={styles.answersListContainer}>
-            <AnswersList
-              answers={gameQuestions.length ? gameQuestions[currentLevel].answers : []}
-            />
-          </div>
-        </div>
+        <Question />
       </div>
-      {(width > showLevelsFromWidth || isShowLevels) && (
-        <div
-          className={`${styles.levelsListContainer} ${
-            width <= showLevelsFromWidth ? styles.mobLevelsListContainer : ''
-          }`}
-        >
+      {isRenderLevels && (
+        <div className={levelsListClasses}>
           <LevelsList />
         </div>
       )}

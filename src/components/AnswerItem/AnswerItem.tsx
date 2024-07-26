@@ -18,12 +18,18 @@ const AnswerItem: React.FC<AnswerItemProps> = ({
   clickHandler,
 }) => {
   const stateClasses = useMemo(() => {
-    if (isCorrect !== undefined) {
-      return isCorrect ? styles.correct : styles.wrong;
+    let cls = '';
+
+    if (isActive) {
+      cls = styles.active;
+
+      if (isCorrect !== undefined) {
+        cls = `${cls} ${isCorrect ? styles.correct : styles.wrong}`;
+      }
     }
 
-    return '';
-  }, [isCorrect]);
+    return cls;
+  }, [isActive, isCorrect]);
 
   const onClickProp = useMemo(
     () => (!isActive && clickHandler ? clickHandler : undefined),
@@ -45,7 +51,7 @@ const AnswerItem: React.FC<AnswerItemProps> = ({
     <div
       role="button"
       tabIndex={-1}
-      className={`${styles.answerItem} ${isActive ? `${styles.active} ${stateClasses}` : ''}`}
+      className={`${styles.answerItem} ${stateClasses}`}
       onClick={onClickProp}
       onKeyDown={onKeyDownProp}
     >

@@ -1,3 +1,7 @@
 .btnContainer {
   padding-top: 6.4rem;
 }
+
+.titlePart {
+  display: inline-block;
+}
