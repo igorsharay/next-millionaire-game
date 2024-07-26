@@ -1,0 +1,52 @@
+.levelItem {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.levelBgImage {
+  color: var(--color-inactive);
+  transition: var(--transition);
+  width: 100%;
+  height: auto;
+}
+
+.levelText {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-text);
+  font-size: 2rem;
+  font-weight: var(--font-weight-regular);
+}
+
+.active .levelText {
+  color: var(--color-primary);
+}
+
+.active .levelBgImage {
+  color: var(--color-primary);
+}
+
+.disabled .levelText {
+  color: var(--color-inactive);
+}
+
+.disabled .levelBgImage {
+  color: var(--color-inactive);
+}
+
+@media (min-width: 1024px) {
+  .levelBgImage {
+    min-width: 376px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .levelText {
+    font-size: 2.45rem;
+  }
+}
+

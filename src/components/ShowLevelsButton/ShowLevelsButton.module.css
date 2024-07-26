@@ -1,0 +1,9 @@
+.menuContainer {
+  appearance: none;
+  border: 0;
+  background: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+}

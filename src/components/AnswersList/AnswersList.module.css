@@ -1,0 +1,18 @@
+.answersList {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 28px;
+  width: 810px;
+}
+
+@media (max-width: 1360px) {
+  .answersList {
+    row-gap: 8px;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .answersList {
+    justify-content: center;
+  }
+}

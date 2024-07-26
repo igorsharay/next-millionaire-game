@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#### Basic representation of the popular game "Who wants to be a millionaire?".
 
-## Getting Started
+## Available Scripts
 
-First, run the development server:
+In the project directory, you can:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
+### `npm run dev`
+Run the development server.\
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### `npm run prepare`
+Runs once the husky preparation script.\
+You will be able to see any lint errors on `git push`.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### `npm run build`
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Learn More
+### `npm run lint`
+Manualy runs eslint check with automatic fixing if possible.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Setting up game config
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+You can change the game config in `src/lib/game-config.json` file.
 
-## Deploy on Vercel
+### Basic game settings
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`prize` - Amount of money for the right asnwer.\
+`prizeMultiplier` - Multiplier that applies on win amount of money.\
+`questionsPerGame` - How many questions will be randomly selected for game.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Add new questions
+`questions` - You can add as many questions as you want. Questions will be picked randomlyfor each the game.\
+`answers` - You can add any amount of answers. To proceed to the next level answers should contain at least one correct option `isCorrect`.
+
+Example:
+
+```
+{
+  "questions": [
+    {
+      "text": "Which two words traditionally appear onscreen at the termination of a feature film",
+      "answers": [
+        {
+          "text": "The End",
+          "isCorrect": true
+        },
+        {
+          "text": "The Conclusion",
+          "isCorrect": false
+        },
+      ]
+    },
+  ]
+},
+```
+

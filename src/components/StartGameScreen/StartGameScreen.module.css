@@ -1,0 +1,9 @@
+.containerBg {
+  background: linear-gradient(
+    to bottom right,
+    #ffffff 0%,
+    #ffffff 50%,
+    var(--color-primary-light) 50%,
+    var(--color-primary-light) 100%
+  );
+}

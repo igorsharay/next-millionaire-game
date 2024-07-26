@@ -1,0 +1,9 @@
+node_modules
+build
+dist
+.next
+.git
+.husky
+package-lock.json
+yarn.lock
+inject

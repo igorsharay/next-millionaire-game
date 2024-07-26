@@ -1,0 +1,12 @@
+.image {
+  width: 100%;
+  max-width: 624px;
+  height: auto;
+  align-self: flex-end;
+}
+
+@media (max-width: 768px) {
+  .image {
+    max-height: 300px;
+  }
+}

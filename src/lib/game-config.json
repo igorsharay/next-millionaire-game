@@ -1,0 +1,305 @@
+{
+  "prize": 500,
+  "prizeMultiplier": 2,
+  "questionsPerGame": 12,
+  "questions": [
+    {
+      "text": "Which two words traditionally appear onscreen at the termination of a feature film",
+      "answers": [
+        {
+          "text": "The End",
+          "isCorrect": true
+        },
+        {
+          "text": "The Conclusion",
+          "isCorrect": false
+        },
+        {
+          "text": "The Finish",
+          "isCorrect": false
+        },
+        {
+          "text": "The Pizza Rolls Are Done",
+          "isCorrect": false
+        },
+        {
+          "text": "One more answers",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "text": "A person with well-developed abdominal muscles is said to have a what?",
+      "answers": [
+        {
+          "text": "One-pack",
+          "isCorrect": false
+        },
+        {
+          "text": "6-pack",
+          "isCorrect": true
+        },
+        {
+          "text": "12-pack",
+          "isCorrect": false
+        },
+        {
+          "text": "Family-pack",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "text": "A magnet would most likely attract which of the following?",
+      "answers": [
+        {
+          "text": "Metal",
+          "isCorrect": true
+        },
+        {
+          "text": "Plastic",
+          "isCorrect": false
+        },
+        {
+          "text": "The wrong man",
+          "isCorrect": false
+        },
+        {
+          "text": "The saint spirit",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "text": "Which of these names is not in the title of a Shakespeare play?",
+      "answers": [
+        {
+          "text": "Hamlet",
+          "isCorrect": false
+        },
+        {
+          "text": "Romeo",
+          "isCorrect": false
+        },
+        {
+          "text": "Darren",
+          "isCorrect": true
+        },
+        {
+          "text": "Macbeth",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "text": "Where did Scotch whisky originate?",
+      "answers": [
+        {
+          "text": "Ireland",
+          "isCorrect": false
+        },
+        {
+          "text": "Wales",
+          "isCorrect": false
+        },
+        {
+          "text": "The United States",
+          "isCorrect": false
+        },
+        {
+          "text": "Scotland",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "text": "Which Disney character famously leaves a glass slipper behind at a royal ball",
+      "answers": [
+        {
+          "text": "Pocahontas",
+          "isCorrect": false
+        },
+        {
+          "text": "Sleeping Beauty",
+          "isCorrect": false
+        },
+        {
+          "text": "Cinderella",
+          "isCorrect": true
+        },
+        {
+          "text": "Elsa",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "text": "Which of these brands was chiefly associated with the manufacture of household locks",
+      "answers": [
+        {
+          "text": "Phillips",
+          "isCorrect": false
+        },
+        {
+          "text": "Flymo",
+          "isCorrect": false
+        },
+        {
+          "text": "Chubb",
+          "isCorrect": true
+        },
+        {
+          "text": "Ronseal",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "text": "The hammer and sickle is one of the most recognisable symbols of which political ideology",
+      "answers": [
+        {
+          "text": "Republicanism",
+          "isCorrect": false
+        },
+        {
+          "text": "Communism",
+          "isCorrect": true
+        },
+        {
+          "text": "Conservatism",
+          "isCorrect": false
+        },
+        {
+          "text": "Liberalism",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "text": "At the closest point, which island group is only 50 miles south-east of the coast of Florida",
+      "answers": [
+        {
+          "text": "Bahamas",
+          "isCorrect": true
+        },
+        {
+          "text": "US Virgin Islands",
+          "isCorrect": false
+        },
+        {
+          "text": "Turks and Caicos Islands",
+          "isCorrect": false
+        },
+        {
+          "text": "Bermuda",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "text": "Construction of which of these famous landmarks was completed first",
+      "answers": [
+        {
+          "text": "Empire State Building",
+          "isCorrect": false
+        },
+        {
+          "text": "Royal Albert Hall",
+          "isCorrect": false
+        },
+        {
+          "text": "Eiffel Tower",
+          "isCorrect": false
+        },
+        {
+          "text": "Big Ben Clock Tower",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "text": "Which of these cetaceans is classified as a “toothed whale”",
+      "answers": [
+        {
+          "text": "Gray whale",
+          "isCorrect": false
+        },
+        {
+          "text": "Minke whale",
+          "isCorrect": false
+        },
+        {
+          "text": "Sperm whale",
+          "isCorrect": true
+        },
+        {
+          "text": "Humpback whale",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "text": "The word “aristocracy“ literally means power in the hands of",
+      "answers": [
+        {
+          "text": "The few",
+          "isCorrect": false
+        },
+        {
+          "text": "The best",
+          "isCorrect": true
+        },
+        {
+          "text": "The barons",
+          "isCorrect": false
+        },
+        {
+          "text": "The rich",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "text": "In which palace was Queen Elizabeth I born",
+      "answers": [
+        {
+          "text": "Greenwich",
+          "isCorrect": true
+        },
+        {
+          "text": "Richmond",
+          "isCorrect": false
+        },
+        {
+          "text": "Hampton Court",
+          "isCorrect": false
+        },
+        {
+          "text": "Kensington",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "text": "What is the Celsius equivalent of 77 degrees Fahrenheit",
+      "answers": [
+        {
+          "text": "15",
+          "isCorrect": false
+        },
+        {
+          "text": "20",
+          "isCorrect": false
+        },
+        {
+          "text": "25",
+          "isCorrect": true
+        },
+        {
+          "text": "30",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}
