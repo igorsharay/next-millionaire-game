@@ -92,6 +92,7 @@
   .question {
     display: flex;
     flex-grow: 1;
-    align-self: center;
+    align-items: center;
+    padding-top: 0;
   }
 }

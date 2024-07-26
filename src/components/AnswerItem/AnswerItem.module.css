@@ -32,29 +32,45 @@
   font-weight: var(--font-weight-bold);
 }
 
-.answerItem:hover .answerBgImage {
-  stroke: var(--color-primary);
-  fill: var(--color-light);
-}
-
-.answerItem.active:hover .answerBgImage,
 .active .answerBgImage {
   stroke: var(--color-primary);
   fill: var(--color-primary-light);
 }
 
-.answerItem.correct:hover .answerBgImage,
 .correct .answerBgImage {
   animation: setCorrectAnswer 2s ease-out;
   animation-delay: 0s;
   animation-fill-mode: forwards;
 }
 
-.answerItem.wrong:hover .answerBgImage,
 .wrong .answerBgImage {
   animation: setWrongAnswer 2s ease-out;
   animation-delay: 0s;
   animation-fill-mode: forwards;
+}
+
+@media (hover: hover) {
+  .answerItem:hover .answerBgImage {
+    stroke: var(--color-primary);
+    fill: var(--color-light);
+  }
+
+  .answerItem.active:hover .answerBgImage {
+    stroke: var(--color-primary);
+    fill: var(--color-primary-light);
+  }
+
+  .answerItem.correct:hover .answerBgImage {
+    animation: setCorrectAnswer 2s ease-out;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+  }
+
+  .answerItem.wrong:hover .answerBgImage {
+    animation: setWrongAnswer 2s ease-out;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+  }
 }
 
 @keyframes setCorrectAnswer {
