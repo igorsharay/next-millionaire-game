@@ -29,9 +29,9 @@ function GameScreen() {
         ) : null}
 
         <div className={styles.questionContainer}>
-          <h4 className={styles.question}>
-            {gameQuestions.length ? gameQuestions[currentLevel].text : 'No questions'}
-          </h4>
+          <div className={styles.question}>
+            <h4>{gameQuestions.length ? gameQuestions[currentLevel].text : 'No questions'}</h4>
+          </div>
           <div className={styles.answersListContainer}>
             <AnswersList
               answers={gameQuestions.length ? gameQuestions[currentLevel].answers : []}
