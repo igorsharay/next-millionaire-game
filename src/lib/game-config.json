@@ -4,301 +4,382 @@
   "questionsPerGame": 12,
   "questions": [
     {
-      "text": "Which two words traditionally appear onscreen at the termination of a feature film",
+      "text": "Which two words traditionally appear onscreen at the termination of a feature film?",
       "answers": [
-        {
-          "text": "The End",
-          "isCorrect": true
-        },
-        {
-          "text": "The Conclusion",
-          "isCorrect": false
-        },
-        {
-          "text": "The Finish",
-          "isCorrect": false
-        },
-        {
-          "text": "The Pizza Rolls Are Done",
-          "isCorrect": false
-        },
-        {
-          "text": "One more answers",
-          "isCorrect": true
-        }
+        { "text": "The End", "isCorrect": true },
+        { "text": "The Conclusion", "isCorrect": false },
+        { "text": "The Finish", "isCorrect": false },
+        { "text": "The Pizza Rolls Are Done", "isCorrect": false },
+        { "text": "The Big Bang Theory", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "Which of the following are programming paradigms?",
+      "answers": [
+        { "text": "Object-oriented", "isCorrect": true },
+        { "text": "Functional", "isCorrect": true },
+        { "text": "Procedural", "isCorrect": true },
+        { "text": "Relational", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "Which of the following are renewable energy sources?",
+      "answers": [
+        { "text": "Solar", "isCorrect": true },
+        { "text": "Wind", "isCorrect": true },
+        { "text": "Coal", "isCorrect": false },
+        { "text": "Hydropower", "isCorrect": true }
       ]
     },
     {
       "text": "A person with well-developed abdominal muscles is said to have a what?",
       "answers": [
-        {
-          "text": "One-pack",
-          "isCorrect": false
-        },
-        {
-          "text": "6-pack",
-          "isCorrect": true
-        },
-        {
-          "text": "12-pack",
-          "isCorrect": false
-        },
-        {
-          "text": "Family-pack",
-          "isCorrect": false
-        }
+        { "text": "One-pack", "isCorrect": false },
+        { "text": "6-pack", "isCorrect": true },
+        { "text": "12-pack", "isCorrect": false },
+        { "text": "Family-pack", "isCorrect": false }
       ]
     },
     {
       "text": "A magnet would most likely attract which of the following?",
       "answers": [
-        {
-          "text": "Metal",
-          "isCorrect": true
-        },
-        {
-          "text": "Plastic",
-          "isCorrect": false
-        },
-        {
-          "text": "The wrong man",
-          "isCorrect": false
-        },
-        {
-          "text": "The saint spirit",
-          "isCorrect": false
-        }
+        { "text": "Metal", "isCorrect": true },
+        { "text": "Plastic", "isCorrect": false },
+        { "text": "The wrong man", "isCorrect": false },
+        { "text": "The saint spirit", "isCorrect": false }
       ]
     },
     {
       "text": "Which of these names is not in the title of a Shakespeare play?",
       "answers": [
-        {
-          "text": "Hamlet",
-          "isCorrect": false
-        },
-        {
-          "text": "Romeo",
-          "isCorrect": false
-        },
-        {
-          "text": "Darren",
-          "isCorrect": true
-        },
-        {
-          "text": "Macbeth",
-          "isCorrect": false
-        }
+        { "text": "Hamlet", "isCorrect": false },
+        { "text": "Romeo", "isCorrect": false },
+        { "text": "Darren", "isCorrect": true },
+        { "text": "Macbeth", "isCorrect": false }
       ]
     },
     {
       "text": "Where did Scotch whisky originate?",
       "answers": [
-        {
-          "text": "Ireland",
-          "isCorrect": false
-        },
-        {
-          "text": "Wales",
-          "isCorrect": false
-        },
-        {
-          "text": "The United States",
-          "isCorrect": false
-        },
-        {
-          "text": "Scotland",
-          "isCorrect": true
-        }
+        { "text": "Ireland", "isCorrect": false },
+        { "text": "Wales", "isCorrect": false },
+        { "text": "The United States", "isCorrect": false },
+        { "text": "Scotland", "isCorrect": true }
       ]
     },
     {
-      "text": "Which Disney character famously leaves a glass slipper behind at a royal ball",
+      "text": "Which Disney character famously leaves a glass slipper behind at a royal ball?",
       "answers": [
-        {
-          "text": "Pocahontas",
-          "isCorrect": false
-        },
-        {
-          "text": "Sleeping Beauty",
-          "isCorrect": false
-        },
-        {
-          "text": "Cinderella",
-          "isCorrect": true
-        },
-        {
-          "text": "Elsa",
-          "isCorrect": false
-        }
+        { "text": "Pocahontas", "isCorrect": false },
+        { "text": "Sleeping Beauty", "isCorrect": false },
+        { "text": "Cinderella", "isCorrect": true },
+        { "text": "Elsa", "isCorrect": false }
       ]
     },
     {
-      "text": "Which of these brands was chiefly associated with the manufacture of household locks",
+      "text": "Which of these brands was chiefly associated with the manufacture of household locks?",
       "answers": [
-        {
-          "text": "Phillips",
-          "isCorrect": false
-        },
-        {
-          "text": "Flymo",
-          "isCorrect": false
-        },
-        {
-          "text": "Chubb",
-          "isCorrect": true
-        },
-        {
-          "text": "Ronseal",
-          "isCorrect": false
-        }
+        { "text": "Phillips", "isCorrect": false },
+        { "text": "Flymo", "isCorrect": false },
+        { "text": "Chubb", "isCorrect": true },
+        { "text": "Ronseal", "isCorrect": false }
       ]
     },
     {
-      "text": "The hammer and sickle is one of the most recognisable symbols of which political ideology",
+      "text": "Which country is known as the Land of the Rising Sun?",
       "answers": [
-        {
-          "text": "Republicanism",
-          "isCorrect": false
-        },
-        {
-          "text": "Communism",
-          "isCorrect": true
-        },
-        {
-          "text": "Conservatism",
-          "isCorrect": false
-        },
-        {
-          "text": "Liberalism",
-          "isCorrect": false
-        }
+        { "text": "China", "isCorrect": false },
+        { "text": "South Korea", "isCorrect": false },
+        { "text": "Thailand", "isCorrect": false },
+        { "text": "Japan", "isCorrect": true }
       ]
     },
     {
-      "text": "At the closest point, which island group is only 50 miles south-east of the coast of Florida",
+      "text": "What is the capital city of France?",
       "answers": [
-        {
-          "text": "Bahamas",
-          "isCorrect": true
-        },
-        {
-          "text": "US Virgin Islands",
-          "isCorrect": false
-        },
-        {
-          "text": "Turks and Caicos Islands",
-          "isCorrect": false
-        },
-        {
-          "text": "Bermuda",
-          "isCorrect": false
-        }
+        { "text": "Berlin", "isCorrect": false },
+        { "text": "Paris", "isCorrect": true },
+        { "text": "Madrid", "isCorrect": false },
+        { "text": "Rome", "isCorrect": false }
       ]
     },
     {
-      "text": "Construction of which of these famous landmarks was completed first",
+      "text": "Which element has the atomic number 1?",
       "answers": [
-        {
-          "text": "Empire State Building",
-          "isCorrect": false
-        },
-        {
-          "text": "Royal Albert Hall",
-          "isCorrect": false
-        },
-        {
-          "text": "Eiffel Tower",
-          "isCorrect": false
-        },
-        {
-          "text": "Big Ben Clock Tower",
-          "isCorrect": true
-        }
+        { "text": "Helium", "isCorrect": false },
+        { "text": "Oxygen", "isCorrect": false },
+        { "text": "Carbon", "isCorrect": false },
+        { "text": "Hydrogen", "isCorrect": true }
       ]
     },
     {
-      "text": "Which of these cetaceans is classified as a “toothed whale”",
+      "text": "The hammer and sickle is one of the most recognisable symbols of which political ideology?",
       "answers": [
-        {
-          "text": "Gray whale",
-          "isCorrect": false
-        },
-        {
-          "text": "Minke whale",
-          "isCorrect": false
-        },
-        {
-          "text": "Sperm whale",
-          "isCorrect": true
-        },
-        {
-          "text": "Humpback whale",
-          "isCorrect": false
-        }
+        { "text": "Republicanism", "isCorrect": false },
+        { "text": "Communism", "isCorrect": true },
+        { "text": "Conservatism", "isCorrect": false },
+        { "text": "Liberalism", "isCorrect": false }
       ]
     },
     {
-      "text": "The word “aristocracy“ literally means power in the hands of",
+      "text": "At the closest point, which island group is only 50 miles south-east of the coast of Florida?",
       "answers": [
-        {
-          "text": "The few",
-          "isCorrect": false
-        },
-        {
-          "text": "The best",
-          "isCorrect": true
-        },
-        {
-          "text": "The barons",
-          "isCorrect": false
-        },
-        {
-          "text": "The rich",
-          "isCorrect": false
-        }
+        { "text": "Bahamas", "isCorrect": true },
+        { "text": "US Virgin Islands", "isCorrect": false },
+        { "text": "Turks and Caicos Islands", "isCorrect": false },
+        { "text": "Bermuda", "isCorrect": false }
       ]
     },
     {
-      "text": "In which palace was Queen Elizabeth I born",
+      "text": "Which of the following are types of computer networks?",
       "answers": [
-        {
-          "text": "Greenwich",
-          "isCorrect": true
-        },
-        {
-          "text": "Richmond",
-          "isCorrect": false
-        },
-        {
-          "text": "Hampton Court",
-          "isCorrect": false
-        },
-        {
-          "text": "Kensington",
-          "isCorrect": true
-        }
+        { "text": "LAN", "isCorrect": true },
+        { "text": "WAN", "isCorrect": true },
+        { "text": "GAN", "isCorrect": false },
+        { "text": "AAN", "isCorrect": false }
       ]
     },
     {
-      "text": "What is the Celsius equivalent of 77 degrees Fahrenheit",
+      "text": "Which of the following are units of measurement for data?",
       "answers": [
-        {
-          "text": "15",
-          "isCorrect": false
-        },
-        {
-          "text": "20",
-          "isCorrect": false
-        },
-        {
-          "text": "25",
-          "isCorrect": true
-        },
-        {
-          "text": "30",
-          "isCorrect": false
-        }
+        { "text": "Byte", "isCorrect": true },
+        { "text": "Kilogram", "isCorrect": false },
+        { "text": "Megabite", "isCorrect": false },
+        { "text": "Watt", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "Construction of which of these famous landmarks was completed first?",
+      "answers": [
+        { "text": "Empire State Building", "isCorrect": false },
+        { "text": "Royal Albert Hall", "isCorrect": false },
+        { "text": "Eiffel Tower", "isCorrect": false },
+        { "text": "Big Ben Clock Tower", "isCorrect": true }
+      ]
+    },
+    {
+      "text": "Which of these cetaceans is classified as a “toothed whale”?",
+      "answers": [
+        { "text": "Gray whale", "isCorrect": false },
+        { "text": "Minke whale", "isCorrect": false },
+        { "text": "Sperm whale", "isCorrect": true },
+        { "text": "Humpback whale", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "The word “aristocracy“ literally means power in the hands of?",
+      "answers": [
+        { "text": "The few", "isCorrect": false },
+        { "text": "The best", "isCorrect": true },
+        { "text": "The barons", "isCorrect": false },
+        { "text": "The rich", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "In which palace was Queen Elizabeth I born?",
+      "answers": [
+        { "text": "Greenwich", "isCorrect": true },
+        { "text": "Richmond", "isCorrect": false },
+        { "text": "Hampton Court", "isCorrect": false },
+        { "text": "Kensington", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "What is the Celsius equivalent of 77 degrees Fahrenheit?",
+      "answers": [
+        { "text": "15", "isCorrect": false },
+        { "text": "20", "isCorrect": false },
+        { "text": "25", "isCorrect": true },
+        { "text": "30", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "Which planet is known as the Red Planet?",
+      "answers": [
+        { "text": "Earth", "isCorrect": false },
+        { "text": "Mars", "isCorrect": true },
+        { "text": "Jupiter", "isCorrect": false },
+        { "text": "Venus", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "Who wrote the play 'Romeo and Juliet'?",
+      "answers": [
+        { "text": "Charles Dickens", "isCorrect": false },
+        { "text": "Mark Twain", "isCorrect": false },
+        { "text": "William Shakespeare", "isCorrect": true },
+        { "text": "Jane Austen", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "What is the largest ocean on Earth?",
+      "answers": [
+        { "text": "Atlantic Ocean", "isCorrect": false },
+        { "text": "Indian Ocean", "isCorrect": false },
+        { "text": "Pacific Ocean", "isCorrect": true },
+        { "text": "Arctic Ocean", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "Who was the first President of the United States?",
+      "answers": [
+        { "text": "Abraham Lincoln", "isCorrect": false },
+        { "text": "Thomas Jefferson", "isCorrect": false },
+        { "text": "George Washington", "isCorrect": true },
+        { "text": "John Adams", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "What is the chemical symbol for water?",
+      "answers": [
+        { "text": "CO2", "isCorrect": false },
+        { "text": "O2", "isCorrect": false },
+        { "text": "H2O", "isCorrect": true },
+        { "text": "NaCl", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "In which year did the Titanic sink?",
+      "answers": [
+        { "text": "1912", "isCorrect": true },
+        { "text": "1905", "isCorrect": false },
+        { "text": "1921", "isCorrect": false },
+        { "text": "1915", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "Which is the smallest continent by land area?",
+      "answers": [
+        { "text": "Australia", "isCorrect": true },
+        { "text": "Europe", "isCorrect": false },
+        { "text": "Antarctica", "isCorrect": false },
+        { "text": "South America", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "Who painted the Mona Lisa?",
+      "answers": [
+        { "text": "Vincent van Gogh", "isCorrect": false },
+        { "text": "Pablo Picasso", "isCorrect": false },
+        { "text": "Leonardo da Vinci", "isCorrect": true },
+        { "text": "Claude Monet", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "Which planet is closest to the Sun?",
+      "answers": [
+        { "text": "Venus", "isCorrect": false },
+        { "text": "Earth", "isCorrect": false },
+        { "text": "Mars", "isCorrect": false },
+        { "text": "Mercury", "isCorrect": true }
+      ]
+    },
+    {
+      "text": "What is the main ingredient in guacamole?",
+      "answers": [
+        { "text": "Tomato", "isCorrect": false },
+        { "text": "Avocado", "isCorrect": true },
+        { "text": "Onion", "isCorrect": false },
+        { "text": "Lemon", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "Which organ is primarily responsible for pumping blood through the body?",
+      "answers": [
+        { "text": "Brain", "isCorrect": false },
+        { "text": "Lungs", "isCorrect": false },
+        { "text": "Heart", "isCorrect": true },
+        { "text": "Kidney", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "What is the longest river in the world?",
+      "answers": [
+        { "text": "Amazon River", "isCorrect": false },
+        { "text": "Mississippi River", "isCorrect": false },
+        { "text": "Yangtze River", "isCorrect": false },
+        { "text": "Nile River", "isCorrect": true }
+      ]
+    },
+    {
+      "text": "Which of the following are programming languages?",
+      "answers": [
+        { "text": "Python", "isCorrect": true },
+        { "text": "Java", "isCorrect": true },
+        { "text": "HTML", "isCorrect": false },
+        { "text": "C+-", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "Which countries are part of the United Kingdom?",
+      "answers": [
+        { "text": "Scotland", "isCorrect": true },
+        { "text": "Wales", "isCorrect": true },
+        { "text": "Ireland", "isCorrect": false },
+        { "text": "China", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "Which planets are known as gas giants?",
+      "answers": [
+        { "text": "Mars", "isCorrect": false },
+        { "text": "Jupiter", "isCorrect": true },
+        { "text": "Saturn", "isCorrect": true },
+        { "text": "Earth", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "Which elements are noble gases?",
+      "answers": [
+        { "text": "Helium", "isCorrect": true },
+        { "text": "Oxygen", "isCorrect": false },
+        { "text": "Neon", "isCorrect": true },
+        { "text": "Nitrogen", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "Which of the following are primary colors?",
+      "answers": [
+        { "text": "Red", "isCorrect": true },
+        { "text": "Blue", "isCorrect": true },
+        { "text": "Green", "isCorrect": false },
+        { "text": "Purple", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "Which of the following are types of musical instruments?",
+      "answers": [
+        { "text": "Violince", "isCorrect": false },
+        { "text": "Pianoboy", "isCorrect": false },
+        { "text": "Laptop", "isCorrect": false },
+        { "text": "Drum", "isCorrect": true }
+      ]
+    },
+    {
+      "text": "Which city is known as major financial center?",
+      "answers": [
+        { "text": "Honolulu", "isCorrect": false },
+        { "text": "Paris", "isCorrect": true },
+        { "text": "Zhytomir", "isCorrect": false },
+        { "text": "Cairo", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "Which fruit is considered berrier?",
+      "answers": [
+        { "text": "Strawberry", "isCorrect": false },
+        { "text": "Cherry", "isCorrect": false },
+        { "text": "Banana", "isCorrect": true },
+        { "text": "Apple", "isCorrect": false }
+      ]
+    },
+    {
+      "text": "Which of the following are considered mammals?",
+      "answers": [
+        { "text": "Whale", "isCorrect": true },
+        { "text": "Warm", "isCorrect": false },
+        { "text": "Shark", "isCorrect": false },
+        { "text": "Chair", "isCorrect": false }
       ]
     }
   ]
