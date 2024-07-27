@@ -13,7 +13,7 @@ const ShowLevelsButton: React.FC<ShowLevelsButtonProps> = ({ isShowLevels, click
   <button type="button" className={styles.menuContainer} onClick={clickHandler}>
     {isShowLevels ? (
       <Image
-        className={styles.levelBgImage}
+        className={styles.icon}
         src="/images/close.svg"
         alt="Close icon"
         width={24}
@@ -21,7 +21,7 @@ const ShowLevelsButton: React.FC<ShowLevelsButtonProps> = ({ isShowLevels, click
       />
     ) : (
       <Image
-        className={styles.levelBgImage}
+        className={styles.icon}
         src="/images/menu.svg"
         alt="Menu icon"
         width={24}

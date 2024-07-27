@@ -1,8 +1,12 @@
 .answerItem {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
   position: relative;
   display: flex;
   cursor: pointer;
-  width: 405px;
+  width: 42rem;
   height: auto;
 }
 
@@ -16,9 +20,9 @@
 
 .answerText {
   display: flex;
-  gap: 8px;
+  gap: 0.8rem;
   position: absolute;
-  left: 50px;
+  left: 5rem;
   top: 50%;
   transform: translate(0, -50%);
   color: var(--color-text);
@@ -30,6 +34,11 @@
   color: var(--color-primary);
   font-size: 2rem;
   font-weight: var(--font-weight-bold);
+}
+
+.answerItem:focus .answerBgImage {
+  stroke: var(--color-primary);
+  fill: var(--color-light);
 }
 
 .active .answerBgImage {
@@ -47,30 +56,6 @@
   animation: setWrongAnswer 2s ease-out;
   animation-delay: 0s;
   animation-fill-mode: forwards;
-}
-
-@media (hover: hover) {
-  .answerItem:hover .answerBgImage {
-    stroke: var(--color-primary);
-    fill: var(--color-light);
-  }
-
-  .answerItem.active:hover .answerBgImage {
-    stroke: var(--color-primary);
-    fill: var(--color-primary-light);
-  }
-
-  .answerItem.correct:hover .answerBgImage {
-    animation: setCorrectAnswer 2s ease-out;
-    animation-delay: 0s;
-    animation-fill-mode: forwards;
-  }
-
-  .answerItem.wrong:hover .answerBgImage {
-    animation: setWrongAnswer 2s ease-out;
-    animation-delay: 0s;
-    animation-fill-mode: forwards;
-  }
 }
 
 @keyframes setCorrectAnswer {
@@ -127,9 +112,17 @@
   }
 }
 
+@media (hover: hover) {
+  .answerItem:hover .answerBgImage,
+  .answerItem.active:hover .answerBgImage {
+    stroke: var(--color-primary);
+    fill: var(--color-light);
+  }
+}
+
 @media (max-width: 768px) {
   .answerItem {
-    width: 380px;
+    width: 38rem;
   }
 
   .answerText {

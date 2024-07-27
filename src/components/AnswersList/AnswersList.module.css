@@ -1,16 +1,17 @@
 .answersList {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 28px;
-  width: 810px;
+  row-gap: 2.8rem;
+  width: min(84rem, 100%);
 }
 
 @media (max-width: 1360px) {
   .answersList {
-    row-gap: 8px;
+    row-gap: 0.8rem;
     width: 100%;
   }
 }
+
 @media (max-width: 1024px) {
   .answersList {
     justify-content: center;

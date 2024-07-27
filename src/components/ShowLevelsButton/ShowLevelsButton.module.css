@@ -3,7 +3,12 @@
   border: 0;
   background: none;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 2rem;
+  right: 2rem;
   z-index: 2;
+}
+
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
 }

@@ -39,14 +39,12 @@
 
 @media (min-width: 1024px) {
   .levelBgImage {
-    min-width: 376px;
+    min-width: 37.6rem;
   }
 }
 
 @media (max-width: 768px) {
-
   .levelText {
     font-size: 2.45rem;
   }
 }
-

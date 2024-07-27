@@ -1,13 +1,13 @@
 .image {
   width: 100%;
-  max-width: 624px;
+  max-width: 62.4rem;
   height: auto;
   align-self: flex-end;
 }
 
 @media (max-width: 1024px) {
   .image {
-    max-height: 192px;
+    max-height: 19.2rem;
     align-self: center;
   }
 }

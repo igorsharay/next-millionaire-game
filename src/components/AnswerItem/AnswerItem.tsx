@@ -1,5 +1,5 @@
 import AnswerImage from '@/images/answer.svg';
-import React, { KeyboardEvent, useMemo } from 'react';
+import React, { useMemo, useRef } from 'react';
 import styles from './AnswerItem.module.css';
 
 interface AnswerItemProps {
@@ -17,6 +17,8 @@ const AnswerItem: React.FC<AnswerItemProps> = ({
   isCorrect,
   clickHandler,
 }) => {
+  const btnRef = useRef<HTMLButtonElement>(null);
+
   const stateClasses = useMemo(() => {
     let cls = '';
 
@@ -31,36 +33,29 @@ const AnswerItem: React.FC<AnswerItemProps> = ({
     return cls;
   }, [isActive, isCorrect]);
 
-  const onClickProp = useMemo(
-    () => (!isActive && clickHandler ? clickHandler : undefined),
+  const buttonClickHandler = useMemo(
+    () =>
+      !isActive && clickHandler
+        ? () => {
+            btnRef.current?.blur();
+            clickHandler();
+          }
+        : undefined,
     [clickHandler, isActive],
   );
 
-  const onKeyDownProp = useMemo(() => {
-    if (!isActive && clickHandler) {
-      return (e: KeyboardEvent<HTMLDivElement>) => {
-        if (e.code === '13') {
-          clickHandler();
-        }
-      };
-    }
-    return undefined;
-  }, [clickHandler, isActive]);
-
   return (
-    <div
-      role="button"
-      tabIndex={-1}
+    <button
+      ref={btnRef}
       className={`${styles.answerItem} ${stateClasses}`}
-      onClick={onClickProp}
-      onKeyDown={onKeyDownProp}
+      onClick={buttonClickHandler}
     >
       <AnswerImage className={styles.answerBgImage} />
       <div className={styles.answerText}>
         <span className={styles.answerVariantLetter}>{letter}</span>
         <span>{text}</span>
       </div>
-    </div>
+    </button>
   );
 };
 
