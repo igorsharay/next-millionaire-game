@@ -21,6 +21,9 @@
   --min-height: min(100%, 100vh);
   --correct-answer-animation: setCorrectAnswer 2s ease-out 0s forwards;
   --wrong-answer-animation: setWrongAnswer 2s ease-out 0s forwards;
+  --answer-text-animation: fadeIn .35s ease-out 0s forwards;
+  --level-transition: background 0.5s ease-out, color 0.5 ease-out;
+  --question-animation: fadeIn .2s ease-out 0s forwards;
 }
 
 * {
@@ -119,6 +122,21 @@ h4 {
   100% {
     stroke: var(--color-error);
     fill: var(--color-error-light);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
   }
 }
 

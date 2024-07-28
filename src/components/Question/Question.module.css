@@ -13,6 +13,7 @@
   flex-direction: column;
   flex-grow: 1;
   max-width: 70%;
+  animation: var(--question-animation);
 }
 
 .answersListContainer {

@@ -1,4 +1,4 @@
-import { currencyFormat, getLetter, shuffle } from '.';
+import { currencyFormat, getLetter, removeSpaces, shuffle } from '.';
 
 describe('Helper functions', () => {
   it('Should get $ currency', () => {
@@ -16,5 +16,10 @@ describe('Helper functions', () => {
   it('Should get answer letter B', () => {
     const result = getLetter(1);
     expect(result).toBe('B');
+  });
+
+  it('Should get string without spaces', () => {
+    const result = removeSpaces('a b c d');
+    expect(result).toBe('abcd');
   });
 });

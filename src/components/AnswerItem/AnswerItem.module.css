@@ -32,6 +32,8 @@
   text-align: left;
   hyphens: auto;
   word-break: break-word;
+  visibility: hidden;
+  animation: var(--answer-text-animation);
 }
 
 .answerVariantLetter {
@@ -41,7 +43,7 @@
   align-self: center;
 }
 
-.answerItem:focus .answerBgImage {
+.answerItem:not(.active):focus .answerBgImage {
   stroke: var(--color-primary);
   fill: var(--color-light);
 }
@@ -60,8 +62,7 @@
 }
 
 @media (hover: hover) {
-  .answerItem:hover .answerBgImage,
-  .answerItem.active:hover .answerBgImage {
+  .answerItem:not(.active):hover .answerBgImage {
     stroke: var(--color-primary);
     fill: var(--color-light);
   }

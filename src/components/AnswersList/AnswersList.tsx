@@ -1,7 +1,7 @@
 'use client';
 
 import AnswerItem from '@/components/AnswerItem/AnswerItem';
-import { getLetter } from '@/helpers';
+import { getLetter, removeSpaces } from '@/helpers';
 import { getCorrectAnswersCount } from '@/helpers/questionsHelper';
 import { useCheckAnswer } from '@/hooks/useCheckAnswer';
 import { Answer } from '@/types';
@@ -46,7 +46,8 @@ function AnswersList({ answers }: AnswersListProps) {
 
       return (
         <AnswerItem
-          key={getLetter(index)}
+          key={removeSpaces(item.text)}
+          index={index}
           letter={getLetter(index)}
           text={item.text}
           isActive={selectedAnswer.includes(index)}

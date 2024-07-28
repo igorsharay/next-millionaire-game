@@ -34,3 +34,7 @@ export const getLetter = (index: number) => {
 
   return letters[index];
 };
+
+export const removeSpaces = (str: string) => {
+  return str.replaceAll(' ', '');
+};

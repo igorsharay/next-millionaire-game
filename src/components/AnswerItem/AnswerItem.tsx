@@ -2,9 +2,11 @@ import useWindowDimensions from '@/hooks/useWindowDimentions';
 import AnswerImage from '@/images/answer.svg';
 import AnswerMobImage from '@/images/answer-mob.svg';
 import React, { useMemo, useRef } from 'react';
+import { removeSpaces } from '@/helpers';
 import styles from './AnswerItem.module.css';
 
 interface AnswerItemProps {
+  index: number;
   letter: string;
   text: string;
   isActive?: boolean;
@@ -16,6 +18,7 @@ const acceptableAnswerLength = 60;
 const mobBrakePoint = 768;
 
 const AnswerItem: React.FC<AnswerItemProps> = ({
+  index,
   letter,
   text,
   isActive = false,
@@ -51,11 +54,14 @@ const AnswerItem: React.FC<AnswerItemProps> = ({
     [clickHandler, isActive],
   );
 
-  const reducedText =
-    text.length > acceptableAnswerLength ? text.slice(0, acceptableAnswerLength + 1) : text;
+  const reducedText = useMemo(
+    () => (text.length > acceptableAnswerLength ? text.slice(0, acceptableAnswerLength + 1) : text),
+    [text],
+  );
 
   return (
     <button
+      key={removeSpaces(text)}
       ref={btnRef}
       className={`${styles.answerItem} ${stateClasses}`}
       onClick={buttonClickHandler}
@@ -65,7 +71,7 @@ const AnswerItem: React.FC<AnswerItemProps> = ({
       ) : (
         <AnswerImage className={styles.answerBgImage} />
       )}
-      <div className={styles.answerText}>
+      <div className={styles.answerText} style={{ animationDelay: `${index * 0.3}s` }}>
         <span className={styles.answerVariantLetter}>{letter}</span>
         <span>{reducedText}</span>
       </div>

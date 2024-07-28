@@ -19,6 +19,7 @@
   color: var(--color-text);
   font-size: 2rem;
   font-weight: var(--font-weight-regular);
+  transition: var(--level-transition);
 }
 
 .active .levelText,
@@ -26,7 +27,7 @@
   color: var(--color-primary);
 }
 
-.disabled .levelText, 
+.disabled .levelText,
 .disabled .levelBgImage {
   color: var(--color-inactive);
 }
