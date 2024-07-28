@@ -33,7 +33,7 @@ function GameScreen() {
         {isRenderLevelsBtn && (
           <ShowLevelsButton
             isShowLevels={isShowLevels}
-            clickHandler={() => setIsShowLevels((prev) => !prev)}
+            clickHandler={() => setIsShowLevels(isShowLevels)}
           />
         )}
 

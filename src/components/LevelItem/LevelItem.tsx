@@ -14,7 +14,6 @@ const mobBrakePoint = 768;
 
 const LevelItem: React.FC<LevelItemProps> = ({ text, isActive = false, isDisabled = false }) => {
   const { width } = useWindowDimensions();
-
   const isMobile = width < mobBrakePoint;
 
   return (

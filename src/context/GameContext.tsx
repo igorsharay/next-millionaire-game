@@ -21,14 +21,22 @@ interface GameProviderProps {
   children: React.ReactNode;
 }
 
+const gameDefaults = {
+  isGameStarted: false,
+  isGameOver: false,
+  earnedAmount: 0,
+  currentLevel: 0,
+  gameQuestions: [],
+};
+
 const GameContext = createContext<GameContextType | undefined>(undefined);
 
 export const GameProvider: React.FC<GameProviderProps> = ({ children }) => {
-  const [isGameStarted, setGameStarted] = useState(false);
-  const [isGameOver, setIsGameOver] = useState(false);
-  const [earnedAmount, setEarnedAmount] = useState(0);
-  const [currentLevel, setCurrentLevel] = useState(0);
-  const [gameQuestions, setGameQuestions] = useState<Array<Question>>([]);
+  const [isGameStarted, setGameStarted] = useState(gameDefaults.isGameStarted);
+  const [isGameOver, setIsGameOver] = useState(gameDefaults.isGameOver);
+  const [earnedAmount, setEarnedAmount] = useState(gameDefaults.earnedAmount);
+  const [currentLevel, setCurrentLevel] = useState(gameDefaults.currentLevel);
+  const [gameQuestions, setGameQuestions] = useState<Array<Question>>(gameDefaults.gameQuestions);
 
   const startGame = () => {
     setGameStarted(true);
@@ -42,10 +50,10 @@ export const GameProvider: React.FC<GameProviderProps> = ({ children }) => {
 
   const resetGame = () => {
     setGameStarted(true);
-    setIsGameOver(false);
-    setEarnedAmount(0);
-    setCurrentLevel(0);
-    setGameQuestions([]);
+    setIsGameOver(gameDefaults.isGameOver);
+    setEarnedAmount(gameDefaults.earnedAmount);
+    setCurrentLevel(gameDefaults.currentLevel);
+    setGameQuestions(gameDefaults.gameQuestions);
   };
 
   const value = useMemo(

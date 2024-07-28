@@ -12,7 +12,7 @@ interface AnswersListProps {
   answers: Array<Answer>;
 }
 
-const delay = 3000; // runs in 1s after animation finishes
+const delay = 3000; // animation last 2s, runs in 1s after animation finish
 
 function AnswersList({ answers }: AnswersListProps) {
   const { selectedAnswer, setSelectedAnswer } = useCheckAnswer(delay);

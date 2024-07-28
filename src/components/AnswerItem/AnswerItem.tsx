@@ -13,6 +13,7 @@ interface AnswerItemProps {
 }
 
 const acceptableAnswerLength = 60;
+const mobBrakePoint = 768;
 
 const AnswerItem: React.FC<AnswerItemProps> = ({
   letter,
@@ -23,7 +24,7 @@ const AnswerItem: React.FC<AnswerItemProps> = ({
 }) => {
   const btnRef = useRef<HTMLButtonElement>(null);
   const { width } = useWindowDimensions();
-  const isMobile = width < 768; // 768px is the mobile breakpoint
+  const isMobile = width < mobBrakePoint;
 
   const stateClasses = useMemo(() => {
     let cls = '';

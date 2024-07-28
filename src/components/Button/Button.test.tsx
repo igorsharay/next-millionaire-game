@@ -3,9 +3,19 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import Button from './Button';
 
 describe('Button component', () => {
-  it('Should render children', () => {
+  it('Should render with onclick', () => {
     const child = 'Click me';
     render(<Button clickHandler={jest.fn()}>{child}</Button>);
+
+    const btn = screen.getByRole('button');
+
+    expect(btn).toBeInTheDocument();
+    expect(btn).toContainHTML(child);
+  });
+
+  it('Should render without onclick', () => {
+    const child = 'Not click me';
+    render(<Button>{child}</Button>);
 
     const btn = screen.getByRole('button');
 

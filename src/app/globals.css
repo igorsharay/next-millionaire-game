@@ -19,6 +19,8 @@
   --font-weight-bold: 600;
   --transition: all 300ms ease;
   --min-height: min(100%, 100vh);
+  --correct-answer-animation: setCorrectAnswer 2s ease-out 0s forwards;
+  --wrong-answer-animation: setWrongAnswer 2s ease-out 0s forwards;
 }
 
 * {
@@ -64,6 +66,60 @@ h1 {
 h4 {
   font-size: 3.2rem;
   line-height: 3.7rem;
+}
+
+@keyframes setCorrectAnswer {
+  0% {
+    stroke: var(--color-primary);
+    fill: var(--color-primary-light);
+  }
+
+  60% {
+    stroke: var(--color-primary);
+    fill: var(--color-primary-light);
+  }
+
+  70% {
+    stroke: var(--color-success);
+    fill: var(--color-success-light);
+  }
+
+  85% {
+    stroke: var(--color-primary);
+    fill: var(--color-primary-light);
+  }
+
+  100% {
+    stroke: var(--color-success);
+    fill: var(--color-success-light);
+  }
+}
+
+@keyframes setWrongAnswer {
+  0% {
+    stroke: var(--color-primary);
+    fill: var(--color-primary-light);
+  }
+
+  60% {
+    stroke: var(--color-primary);
+    fill: var(--color-primary-light);
+  }
+
+  70% {
+    stroke: var(--color-error);
+    fill: var(--color-error-light);
+  }
+
+  85% {
+    stroke: var(--color-primary);
+    fill: var(--color-primary-light);
+  }
+
+  100% {
+    stroke: var(--color-error);
+    fill: var(--color-error-light);
+  }
 }
 
 @media (min-width: 3840px) {

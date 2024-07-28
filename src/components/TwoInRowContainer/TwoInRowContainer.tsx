@@ -7,8 +7,12 @@ interface TwoInRowContainerProps {
   backgroundClass?: string;
 }
 
-const TwoInRowContainer: React.FC<TwoInRowContainerProps> = ({ left, right, backgroundClass }) => (
-  <div className={`${styles.container} ${backgroundClass || ''}`}>
+const TwoInRowContainer: React.FC<TwoInRowContainerProps> = ({
+  left,
+  right,
+  backgroundClass = '',
+}) => (
+  <div className={`${styles.container} ${backgroundClass}`}>
     <div className={styles.half}>{left}</div>
     <div className={styles.half}>{right}</div>
   </div>
