@@ -9,7 +9,10 @@
 }
 
 .question {
-  max-width: 55vw;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 70%;
 }
 
 .answersListContainer {
@@ -21,17 +24,23 @@
   .questionContainer {
     row-gap: 6rem;
   }
+}
 
-  .answersListContainer {
-    align-items: center;
+@media (max-width: 1200px) {
+  .questionContainer {
+    padding-inline: 0;
+    row-gap: 2rem;
+  }
+
+  .question {
+    padding: 0 2.4rem 0;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .questionContainer {
-    padding: 2.4rem 0;
+    padding: 4.8rem 0 2.4rem;
     height: 100%;
-    row-gap: 2rem;
     align-items: center;
   }
 
@@ -44,13 +53,5 @@
     align-items: center;
     justify-content: center;
     padding: 0 2.4rem 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .questionContainer {
-    padding: 4.8rem 0 2.4rem;
-    height: 100%;
-    align-items: center;
   }
 }

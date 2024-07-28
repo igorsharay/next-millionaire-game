@@ -15,13 +15,11 @@
 
 .levelsListContainer {
   display: flex;
-  /* flex-grow: 1; */
   flex-direction: column;
   flex-basis: 20vw;
   justify-content: center;
   align-items: center;
   background: var(--color-light);
-  padding: 0.8rem 0;
 }
 
 .mobLevelsListContainer {
@@ -34,8 +32,14 @@
   background: var(--color-inactive-light);
 }
 
+@media (max-width: 1200px) {
+  .levelsListContainer {
+    flex-basis: 35vw;
+  }
+}
+
 @media (max-width: 768px) {
   .levelsListContainer {
-    padding: 6.4rem 0 2.4rem;
+    justify-content: flex-start;
   }
 }

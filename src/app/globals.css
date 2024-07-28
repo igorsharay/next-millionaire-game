@@ -40,7 +40,6 @@ body {
 }
 
 body {
-  margin: 0;
   color: var(--color-text);
   background: var(--color-inactive-light);
   font-family: var(--font-family);
@@ -73,14 +72,36 @@ h4 {
   }
 }
 
-@media (min-width: 2048px), (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 2048px) {
   html {
     font-size: 20px;
   }
 }
 
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 2.8rem;
+    line-height: 3.3rem;
+  }
+
+  h4 {
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+  }
+}
+
 @media (max-width: 768px) {
-  html {
-    font-size: 5.75px;
+  body {
+    font-size: 1.4rem;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+    line-height: 3.7rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+    line-height: 2rem;
   }
 }

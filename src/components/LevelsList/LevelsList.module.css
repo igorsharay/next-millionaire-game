@@ -4,4 +4,11 @@
   align-items: center;
   gap: 0.8rem;
   width: 100%;
+  padding: 0.8rem 0;
+}
+
+@media (max-width: 768px) {
+  .levelsList {
+    padding: 6.4rem 0 2.4rem;
+  }
 }

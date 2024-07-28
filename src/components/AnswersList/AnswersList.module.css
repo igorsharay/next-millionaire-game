@@ -2,17 +2,16 @@
   display: flex;
   flex-wrap: wrap;
   row-gap: 2.8rem;
-  width: min(84rem, 100%);
+  width: min(84rem, 90%);
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 1200px) {
   .answersList {
     row-gap: 0.8rem;
-    width: 100%;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .answersList {
     justify-content: center;
   }

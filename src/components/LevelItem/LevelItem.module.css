@@ -21,18 +21,12 @@
   font-weight: var(--font-weight-regular);
 }
 
-.active .levelText {
-  color: var(--color-primary);
-}
-
+.active .levelText,
 .active .levelBgImage {
   color: var(--color-primary);
 }
 
-.disabled .levelText {
-  color: var(--color-inactive);
-}
-
+.disabled .levelText, 
 .disabled .levelBgImage {
   color: var(--color-inactive);
 }
@@ -43,8 +37,14 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .levelText {
-    font-size: 2.45rem;
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .levelText {
+    font-size: 1.4rem;
   }
 }

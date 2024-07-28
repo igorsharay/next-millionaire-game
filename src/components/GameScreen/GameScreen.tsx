@@ -8,7 +8,7 @@ import { useMemo, useState } from 'react';
 import ShowLevelsButton from '../ShowLevelsButton/ShowLevelsButton';
 import styles from './GameScreen.module.css';
 
-const showLevelsFromWidth = 1024;
+const showLevelsFromWidth = 768;
 
 function GameScreen() {
   const [isShowLevels, setIsShowLevels] = useState(false);

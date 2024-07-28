@@ -1,4 +1,6 @@
+import useWindowDimensions from '@/hooks/useWindowDimentions';
 import AnswerImage from '@/images/answer.svg';
+import AnswerMobImage from '@/images/answer-mob.svg';
 import React, { useMemo, useRef } from 'react';
 import styles from './AnswerItem.module.css';
 
@@ -10,6 +12,8 @@ interface AnswerItemProps {
   clickHandler?: () => void;
 }
 
+const acceptableAnswerLength = 60;
+
 const AnswerItem: React.FC<AnswerItemProps> = ({
   letter,
   text,
@@ -18,6 +22,8 @@ const AnswerItem: React.FC<AnswerItemProps> = ({
   clickHandler,
 }) => {
   const btnRef = useRef<HTMLButtonElement>(null);
+  const { width } = useWindowDimensions();
+  const isMobile = width < 768; // 768px is the mobile breakpoint
 
   const stateClasses = useMemo(() => {
     let cls = '';
@@ -44,16 +50,23 @@ const AnswerItem: React.FC<AnswerItemProps> = ({
     [clickHandler, isActive],
   );
 
+  const reducedText =
+    text.length > acceptableAnswerLength ? text.slice(0, acceptableAnswerLength + 1) : text;
+
   return (
     <button
       ref={btnRef}
       className={`${styles.answerItem} ${stateClasses}`}
       onClick={buttonClickHandler}
     >
-      <AnswerImage className={styles.answerBgImage} />
+      {isMobile ? (
+        <AnswerMobImage className={styles.answerBgImage} />
+      ) : (
+        <AnswerImage className={styles.answerBgImage} />
+      )}
       <div className={styles.answerText}>
         <span className={styles.answerVariantLetter}>{letter}</span>
-        <span>{text}</span>
+        <span>{reducedText}</span>
       </div>
     </button>
   );
