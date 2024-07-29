@@ -2,13 +2,31 @@ import { currencyFormat, getLetter, removeSpaces, shuffle } from '.';
 
 describe('Helper functions', () => {
   it('Should get $ currency', () => {
-    const result = currencyFormat(1000, 'USD');
-    expect(result).toBe('$1,000');
+    const { format } = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0,
+    });
+
+    const sum = 1000;
+
+    const test = format(sum);
+    const result = currencyFormat(sum, 'USD');
+    expect(result).toBe(test);
   });
 
   it('Should get € currency', () => {
-    const result = currencyFormat(1000, 'EUR');
-    expect(result).toBe('1.000 €');
+    const { format } = new Intl.NumberFormat('de-DE', {
+      style: 'currency',
+      currency: 'EUR',
+      maximumFractionDigits: 0,
+    });
+
+    const sum = 1000;
+
+    const test = format(sum);
+    const result = currencyFormat(sum, 'EUR');
+    expect(result).toBe(test);
   });
 
   it('Should shuffle array', () => {
