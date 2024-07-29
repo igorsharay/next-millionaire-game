@@ -8,7 +8,7 @@ interface GameContextType {
   isGameOver: boolean;
   earnedAmount: number;
   currentLevel: number;
-  gameQuestions: Array<Question>;
+  gameQuestions: Array<Question> | null;
   setEarnedAmount: (v: number) => void;
   setCurrentLevel: (v: number) => void;
   setGameQuestions: (q: Array<Question>) => void;
@@ -26,7 +26,7 @@ const gameDefaults = {
   isGameOver: false,
   earnedAmount: 0,
   currentLevel: 0,
-  gameQuestions: [],
+  gameQuestions: null,
 };
 
 const GameContext = createContext<GameContextType | undefined>(undefined);
@@ -36,7 +36,9 @@ export const GameProvider: React.FC<GameProviderProps> = ({ children }) => {
   const [isGameOver, setIsGameOver] = useState(gameDefaults.isGameOver);
   const [earnedAmount, setEarnedAmount] = useState(gameDefaults.earnedAmount);
   const [currentLevel, setCurrentLevel] = useState(gameDefaults.currentLevel);
-  const [gameQuestions, setGameQuestions] = useState<Array<Question>>(gameDefaults.gameQuestions);
+  const [gameQuestions, setGameQuestions] = useState<Array<Question> | null>(
+    gameDefaults.gameQuestions,
+  );
 
   const startGame = () => {
     setGameStarted(true);

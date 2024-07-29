@@ -10,7 +10,7 @@ const useSetGameQuestions = () => {
   useEffect(() => {
     const gameQuestions = getGameQuestions(questions, questionsPerGame);
     setGameQuestions(randomizeQuestionsAnswers(gameQuestions));
-  }, [setGameQuestions, questions, questionsPerGame]);
+  }, [questions, questionsPerGame, setGameQuestions]);
 };
 
 export default useSetGameQuestions;

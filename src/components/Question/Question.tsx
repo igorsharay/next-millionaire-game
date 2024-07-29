@@ -7,6 +7,10 @@ import styles from './Question.module.css';
 const Question = () => {
   const { gameQuestions, currentLevel } = useGame();
 
+  if (!gameQuestions) {
+    return null;
+  }
+
   if (!gameQuestions.length) {
     return <h4>No questions</h4>;
   }

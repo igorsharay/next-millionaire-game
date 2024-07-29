@@ -13,8 +13,8 @@ function LevelsList() {
   const { currentLevel, gameQuestions } = useGame();
 
   const levels = useMemo(
-    () => getLevels(prize, prizeMultiplier, gameQuestions.length),
-    [prize, prizeMultiplier, gameQuestions.length],
+    () => getLevels(prize, prizeMultiplier, gameQuestions?.length || 0),
+    [prize, prizeMultiplier, gameQuestions?.length],
   );
 
   const renderLevels = useMemo(() => {
