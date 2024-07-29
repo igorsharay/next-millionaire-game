@@ -22,7 +22,7 @@
   --correct-answer-animation: setCorrectAnswer 2s ease-out 0s forwards;
   --wrong-answer-animation: setWrongAnswer 2s ease-out 0s forwards;
   --answer-text-animation: fadeIn .35s ease-out 0s forwards;
-  --level-transition: background 0.5s ease-out, color 0.5 ease-out;
+  --level-transition: background 0.5s ease-out, color 0.2s ease-out;
   --question-animation: fadeIn .2s ease-out 0s forwards;
 }
 

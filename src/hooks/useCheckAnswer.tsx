@@ -14,7 +14,7 @@ export const useCheckAnswer = (delay: number) => {
   useEffect(() => {
     let timeout = null;
 
-    const answers = gameQuestions[currentLevel]?.answers || [];
+    const answers = gameQuestions ? gameQuestions[currentLevel]?.answers : [];
     const isAllAnswersSelected = getCorrectAnswersCount(answers) === selectedAnswer.length;
 
     if (isAllAnswersSelected) {
@@ -25,7 +25,7 @@ export const useCheckAnswer = (delay: number) => {
           setEarnedAmount(newAmount);
           setSelectedAnswer([]);
 
-          if (currentLevel < gameQuestions.length - 1) {
+          if (gameQuestions && currentLevel < gameQuestions.length - 1) {
             setCurrentLevel(currentLevel + 1);
           } else {
             endGame();
