@@ -57,7 +57,11 @@
   animation: var(--correct-answer-animation);
 }
 
-.wrong .answerBgImage {
+.active.correct .answerBgImage {
+  animation: var(--correct-active-answer-animation);
+}
+
+.active.wrong .answerBgImage {
   animation: var(--wrong-answer-animation);
 }
 

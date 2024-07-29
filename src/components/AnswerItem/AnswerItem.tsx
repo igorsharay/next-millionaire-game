@@ -9,13 +9,16 @@ interface AnswerItemProps {
   index: number;
   letter: string;
   text: string;
-  isActive?: boolean;
   isCorrect?: boolean;
+  isActive?: boolean;
+  isActiveCorrect?: boolean;
   clickHandler?: () => void;
 }
 
 const maxAnswerLength = 60;
 const mobBrakePoint = 768;
+
+const getAnswerState = (isCorrect: boolean) => (isCorrect ? styles.correct : styles.wrong);
 
 const AnswerItem: React.FC<AnswerItemProps> = ({
   index,
@@ -23,6 +26,7 @@ const AnswerItem: React.FC<AnswerItemProps> = ({
   text,
   isActive = false,
   isCorrect,
+  isActiveCorrect,
   clickHandler,
 }) => {
   const btnRef = useRef<HTMLButtonElement>(null);
@@ -35,13 +39,15 @@ const AnswerItem: React.FC<AnswerItemProps> = ({
     if (isActive) {
       cls = styles.active;
 
-      if (isCorrect !== undefined) {
-        cls = `${cls} ${isCorrect ? styles.correct : styles.wrong}`;
+      if (isActiveCorrect !== undefined) {
+        cls = `${cls} ${getAnswerState(isActiveCorrect)}`;
       }
+    } else if (!isActiveCorrect && isCorrect !== undefined) {
+      cls = getAnswerState(isCorrect);
     }
 
     return cls;
-  }, [isActive, isCorrect]);
+  }, [isActive, isActiveCorrect, isCorrect]);
 
   const buttonClickHandler = useMemo(
     () =>

@@ -35,7 +35,7 @@ function AnswersList({ answers }: AnswersListProps) {
     }
 
     return answers.map((item: Answer, index: number) => {
-      const isCorrectProp = !isClickable
+      const isCorrectCurrentProp = !isClickable
         ? selectedAnswer.includes(index) && item.isCorrect
         : undefined;
 
@@ -50,8 +50,9 @@ function AnswersList({ answers }: AnswersListProps) {
           index={index}
           letter={getLetter(index)}
           text={item.text}
+          isCorrect={!isClickable ? item.isCorrect : undefined}
           isActive={selectedAnswer.includes(index)}
-          isCorrect={isCorrectProp}
+          isActiveCorrect={isCorrectCurrentProp}
           clickHandler={clickHandlerProp}
         />
       );
