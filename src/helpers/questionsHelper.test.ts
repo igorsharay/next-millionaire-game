@@ -63,6 +63,18 @@ const questions: Array<Question> = [
         text: 'Answer 3',
         isCorrect: false,
       },
+      {
+        text: 'Answer 4',
+        isCorrect: false,
+      },
+      {
+        text: 'Answer 5',
+        isCorrect: false,
+      },
+      {
+        text: 'Answer 6',
+        isCorrect: false,
+      },
     ],
   },
 ];
@@ -80,7 +92,7 @@ describe('Questions helper functions', () => {
     expect(result.length).toEqual(perGame);
   });
 
-  it('Should randomize qustions answers', () => {
+  it('Should randomize questions answers', () => {
     const qustionIndex = 3;
     const result = randomizeQuestionsAnswers(questions);
     const { answers } = questions[qustionIndex];
