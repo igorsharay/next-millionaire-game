@@ -1,5 +1,7 @@
 #### Basic representation of the popular game "Who wants to be a millionaire?".
 
+The game can be played by this [link](https://next-millionaire-game.vercel.app).
+
 ## Available Scripts
 
 In the project directory, you can:
@@ -10,19 +12,19 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### `npm run prepare`
 Runs once the husky preparation script.\
-You will be able to see any lint errors on `git push`.
+Will automatically run eslint check on `git push` and unit-tests on `git commit`.
 
 ### `npm run build`
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 ### `npm run lint`
-Manualy runs eslint check with automatic fixing if possible.
+Manually runs eslint check with automatic fixing if possible.
 
 
 ## Setting up game config
 
-You can change the game config in `src/lib/game-config.json` file.
+The game config file can be found here `src/lib/game-config.json`.
 
 ### Basic game settings
 
@@ -31,8 +33,8 @@ You can change the game config in `src/lib/game-config.json` file.
 `questionsPerGame` - How many questions will be randomly selected for game.
 
 ### Add new questions
-`questions` - You can add as many questions as you want. Questions will be picked randomlyfor each the game.\
-`answers` - You can add any amount of answers. To proceed to the next level answers should contain at least one correct option `isCorrect`.
+`questions` - You can add as many questions as you want. Questions will be picked randomly for each game.\
+`answers` - You can add any amount of answers. Answers should contain at least one correct option `isCorrect` to proceed to the next level.
 
 Example:
 
@@ -56,3 +58,47 @@ Example:
 },
 ```
 
+
+## Game styles
+
+Css variables can be found here `src/app/global.css`.
+
+### Colors variables
+
+```
+--color-primary: #ff8b37;
+--color-primary-light: #fff3eb;
+--color-primary-dark: #e87928;
+--color-text: #1c1c21;
+--color-btn-text: #ffffff;
+--color-btn: var(--color-primary);
+--color-btn-active: var(--color-primary-dark);
+--color-btn-hover: #ffac70;
+--color-success: #47d867;
+--color-success-light: #e6faea;
+--color-error: #ec6259;
+--color-error-light: #fdeeed;
+--color-inactive: #d0d0d8;
+--color-inactive-light: #f5f5f7;
+--color-light: #ffffff;
+```
+
+### Animations variables
+
+```
+--correct-answer-animation: setCorrectAnswer 2s ease-out 0s forwards;
+--wrong-answer-animation: setWrongAnswer 2s ease-out 0s forwards;
+--answer-text-animation: fadeIn .35s ease-out 0s forwards;
+--level-transition: background 0.5s ease-out, color 0.2s ease-out;
+--question-animation: fadeIn .2s ease-out 0s forwards;
+```
+
+Correct answer & wrong answer have `2s` animation play.\
+Each answer text has `350ms * [answer index]` delay to apear.\
+Question text has `200ms` delay to apear.\
+Level up has color and background transition delay for `200ms` and `500ms` accordingly.
+
+## Other game settings
+
+Click on the answer button has `delay = 1s` delay after answer animation finish before moving to the next question or ending the game.\
+Answer text has maximum `acceptableAnswerLength = 60` symbols acceptable length and will be reduced to it.
