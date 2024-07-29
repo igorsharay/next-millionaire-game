@@ -12,9 +12,11 @@ const Question = () => {
   }
 
   return (
-    <div key={removeSpaces(gameQuestions[currentLevel].text)} className={styles.questionContainer}>
+    <div className={styles.questionContainer}>
       <div className={styles.question}>
-        <h4>{gameQuestions[currentLevel].text}</h4>
+        <h4 key={removeSpaces(gameQuestions[currentLevel].text)}>
+          {gameQuestions[currentLevel].text}
+        </h4>
       </div>
       <div className={styles.answersListContainer}>
         <AnswersList answers={gameQuestions[currentLevel].answers} />

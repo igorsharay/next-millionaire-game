@@ -2,16 +2,16 @@
 
 import Image from 'next/image';
 import React from 'react';
-import styles from './ShowLevelsButton.module.css';
+import styles from './LevelsMenuButton.module.css';
 
-interface ShowLevelsButtonProps {
-  isShowLevels: boolean;
+interface LevelsMenuButtonProps {
+  isOpen: boolean;
   clickHandler: () => void;
 }
 
-const ShowLevelsButton: React.FC<ShowLevelsButtonProps> = ({ isShowLevels, clickHandler }) => (
+const LevelsMenuButton: React.FC<LevelsMenuButtonProps> = ({ isOpen, clickHandler }) => (
   <button type="button" className={styles.menuContainer} onClick={clickHandler}>
-    {isShowLevels ? (
+    {isOpen ? (
       <Image
         className={styles.icon}
         src="/images/close.svg"
@@ -31,4 +31,4 @@ const ShowLevelsButton: React.FC<ShowLevelsButtonProps> = ({ isShowLevels, click
   </button>
 );
 
-export default ShowLevelsButton;
+export default LevelsMenuButton;
