@@ -1,32 +1,19 @@
 import { useGameConfig } from '@/context/GameConfigContext';
-import { Question } from '@/types';
+import { Levels, Question } from '@/types';
 import { useEffect } from 'react';
 
 interface GameInitProps {
   questions: Array<Question>;
-  questionsPerGame: number;
-  prize: number;
-  prizeMultiplier: number;
+  levels: Levels;
 }
 
-const useInitGame = ({ questions, questionsPerGame, prize, prizeMultiplier }: GameInitProps) => {
-  const { setPrize, setPrizeMultiplier, setQuestions, setQuestionsPerGame } = useGameConfig();
+const useInitGame = ({ questions, levels }: GameInitProps) => {
+  const { setQuestions, setLevels } = useGameConfig();
 
   useEffect(() => {
-    setPrize(prize);
-    setPrizeMultiplier(prizeMultiplier);
-    setQuestionsPerGame(questionsPerGame);
     setQuestions(questions);
-  }, [
-    prize,
-    prizeMultiplier,
-    questionsPerGame,
-    questions,
-    setPrize,
-    setPrizeMultiplier,
-    setQuestionsPerGame,
-    setQuestions,
-  ]);
+    setLevels(levels);
+  }, [questions, levels, setQuestions, setLevels]);
 };
 
 export default useInitGame;

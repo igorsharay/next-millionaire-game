@@ -28,9 +28,17 @@ The game config file can be found here `src/lib/game-config.json`.
 
 ### Basic game settings
 
-`prize` - Amount of money for the right asnwer.\
-`prizeMultiplier` - Multiplier that applies on win amount of money.\
-`questionsPerGame` - How many questions will be randomly selected for game.
+`currency` - In which currency display reward. Available values `USD`, `EUR`.\
+`reward` - Amount of money for the right answer for each level.
+
+```
+{
+  levels": {
+    "currency": "USD",
+    "reward": [500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 125000, 250000, 500000, 1000000]
+  }
+}
+```
 
 ### Add new questions
 `questions` - You can add as many questions as you want. Questions will be picked randomly for each game.\
@@ -55,7 +63,7 @@ Example:
       ]
     },
   ]
-},
+}
 ```
 
 
@@ -101,4 +109,4 @@ Level up has color and background transition delay for `200ms` and `500ms` accor
 ## Other game settings
 
 Click on the answer button has `delay = 1s` delay after answer animation finish before moving to the next question or ending the game.\
-Answer text has maximum `acceptableAnswerLength = 60` symbols acceptable length and will be reduced to it.
+Answer text has maximum `maxAnswerLength = 60` symbols length and will be reduced to it.

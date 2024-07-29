@@ -5,7 +5,6 @@ import {
   randomizeQuestionsAnswers,
   getCorrectAnswersIndexes,
   getCorrectAnswersCount,
-  getLevels,
 } from './questionsHelper';
 
 const questions: Array<Question> = [
@@ -113,10 +112,5 @@ describe('Questions helper functions', () => {
     const result = getCorrectAnswersCount(answers);
 
     expect(result).toEqual(2);
-  });
-
-  it('Should get levels correct', () => {
-    const result = getLevels(10, 2, 4);
-    expect(result[3]).toEqual(80);
   });
 });

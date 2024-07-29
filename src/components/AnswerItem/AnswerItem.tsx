@@ -14,7 +14,7 @@ interface AnswerItemProps {
   clickHandler?: () => void;
 }
 
-const acceptableAnswerLength = 60;
+const maxAnswerLength = 60;
 const mobBrakePoint = 768;
 
 const AnswerItem: React.FC<AnswerItemProps> = ({
@@ -55,7 +55,7 @@ const AnswerItem: React.FC<AnswerItemProps> = ({
   );
 
   const reducedText = useMemo(
-    () => (text.length > acceptableAnswerLength ? text.slice(0, acceptableAnswerLength + 1) : text),
+    () => (text.length > maxAnswerLength ? text.slice(0, maxAnswerLength + 1) : text),
     [text],
   );
 

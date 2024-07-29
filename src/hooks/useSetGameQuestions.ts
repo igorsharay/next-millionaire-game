@@ -4,13 +4,18 @@ import { getGameQuestions, randomizeQuestionsAnswers } from '@/helpers/questions
 import { useEffect } from 'react';
 
 const useSetGameQuestions = () => {
-  const { questions, questionsPerGame } = useGameConfig();
+  const {
+    questions,
+    levels: { reward },
+  } = useGameConfig();
   const { setGameQuestions } = useGame();
 
   useEffect(() => {
-    const gameQuestions = getGameQuestions(questions, questionsPerGame);
+    const levelsCount = reward?.length || 0;
+    const gameQuestions = getGameQuestions(questions, levelsCount);
+
     setGameQuestions(randomizeQuestionsAnswers(gameQuestions));
-  }, [questions, questionsPerGame, setGameQuestions]);
+  }, [questions, reward, setGameQuestions]);
 };
 
 export default useSetGameQuestions;

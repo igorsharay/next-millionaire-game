@@ -7,10 +7,14 @@ export interface Question {
   text: string;
   answers: Array<Answer>;
 }
+export type Currencies = 'USD' | 'EUR';
+
+export interface Levels {
+  currency: Currencies;
+  reward: number[];
+}
 
 export interface GameConfig {
-  prize: number;
-  prizeMultiplier: number;
-  questionsPerGame: number;
   questions: Array<Question>;
+  levels: Levels;
 }

@@ -60,13 +60,3 @@ export const checkCorrectAnswers = (answers: Array<Answer>, selectedAnswer: numb
 
   return true;
 };
-
-export const getLevels = (prize: number, prizeMultiplier: number, length: number) => {
-  const levels = [prize];
-
-  for (let i = 1; i < length; i++) {
-    levels.push(levels[i - 1] * prizeMultiplier);
-  }
-
-  return levels;
-};

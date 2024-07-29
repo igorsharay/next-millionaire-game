@@ -9,12 +9,7 @@ export default async function Home() {
   return (
     <GameConfigProvider>
       <GameProvider>
-        <GameContainer
-          questions={data.questions}
-          questionsPerGame={data.questionsPerGame}
-          prize={data.prize}
-          prizeMultiplier={data.prizeMultiplier}
-        />
+        <GameContainer questions={data.questions} levels={data.levels} />
       </GameProvider>
     </GameConfigProvider>
   );

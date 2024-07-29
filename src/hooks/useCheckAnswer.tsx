@@ -1,4 +1,3 @@
-import { useGameConfig } from '@/context/GameConfigContext';
 import { useGame } from '@/context/GameContext';
 import { checkCorrectAnswers, getCorrectAnswersCount } from '@/helpers/questionsHelper';
 import { useEffect, useState } from 'react';
@@ -6,10 +5,7 @@ import { useEffect, useState } from 'react';
 export const useCheckAnswer = (delay: number) => {
   const [selectedAnswer, setSelectedAnswer] = useState<number[]>([]);
 
-  const { prize, prizeMultiplier } = useGameConfig();
-
-  const { gameQuestions, endGame, currentLevel, earnedAmount, setCurrentLevel, setEarnedAmount } =
-    useGame();
+  const { gameQuestions, currentLevel, setCurrentLevel, endGame } = useGame();
 
   useEffect(() => {
     let timeout = null;
@@ -20,14 +16,10 @@ export const useCheckAnswer = (delay: number) => {
     if (isAllAnswersSelected) {
       timeout = setTimeout(() => {
         if (checkCorrectAnswers(answers, selectedAnswer)) {
-          const newAmount = earnedAmount > 0 ? earnedAmount * prizeMultiplier : prize;
-
-          setEarnedAmount(newAmount);
           setSelectedAnswer([]);
+          setCurrentLevel(currentLevel + 1);
 
-          if (gameQuestions && currentLevel < gameQuestions.length - 1) {
-            setCurrentLevel(currentLevel + 1);
-          } else {
+          if (gameQuestions && currentLevel + 1 === gameQuestions.length) {
             endGame();
           }
         } else {
@@ -41,18 +33,7 @@ export const useCheckAnswer = (delay: number) => {
         clearTimeout(timeout);
       }
     };
-  }, [
-    selectedAnswer,
-    delay,
-    gameQuestions,
-    currentLevel,
-    setCurrentLevel,
-    setEarnedAmount,
-    earnedAmount,
-    prizeMultiplier,
-    prize,
-    endGame,
-  ]);
+  }, [selectedAnswer, delay, gameQuestions, currentLevel, setCurrentLevel, endGame]);
 
   return { selectedAnswer, setSelectedAnswer };
 };

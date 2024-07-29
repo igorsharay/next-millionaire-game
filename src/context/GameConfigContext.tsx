@@ -1,43 +1,41 @@
 'use client';
 
-import { Question } from '@/types';
+import { Currencies, Levels, Question } from '@/types';
 import React, { createContext, useContext, useMemo, useState } from 'react';
 
 interface GameConfigContextType {
-  prize: number;
-  prizeMultiplier: number;
   questions: Array<Question>;
-  questionsPerGame: number;
-  setPrize: (v: number) => void;
-  setPrizeMultiplier: (v: number) => void;
+  levels: Levels;
   setQuestions: (q: Array<Question>) => void;
-  setQuestionsPerGame: (n: number) => void;
+  setLevels: (v: Levels) => void;
 }
 
 interface GameConfigProviderProps {
   children: React.ReactNode;
 }
 
+const gameConfigDefaults = {
+  questions: [],
+  levels: {
+    currency: 'USD' as Currencies,
+    reward: [],
+  },
+};
+
 const GameConfigContext = createContext<GameConfigContextType | undefined>(undefined);
 
 export const GameConfigProvider: React.FC<GameConfigProviderProps> = ({ children }) => {
-  const [prize, setPrize] = useState(0);
-  const [prizeMultiplier, setPrizeMultiplier] = useState(0);
-  const [questionsPerGame, setQuestionsPerGame] = useState(0);
-  const [questions, setQuestions] = useState<Array<Question>>([]);
+  const [questions, setQuestions] = useState<Array<Question>>(gameConfigDefaults.questions);
+  const [levels, setLevels] = useState<Levels>(gameConfigDefaults.levels);
 
   const value = useMemo(
     () => ({
-      prize,
-      prizeMultiplier,
       questions,
-      questionsPerGame,
-      setPrize,
-      setPrizeMultiplier,
+      levels,
       setQuestions,
-      setQuestionsPerGame,
+      setLevels,
     }),
-    [prize, prizeMultiplier, questions, questionsPerGame],
+    [questions, levels],
   );
 
   return <GameConfigContext.Provider value={value}>{children}</GameConfigContext.Provider>;

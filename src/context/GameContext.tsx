@@ -6,10 +6,8 @@ import React, { createContext, useContext, useMemo, useState } from 'react';
 interface GameContextType {
   isGameStarted: boolean;
   isGameOver: boolean;
-  earnedAmount: number;
   currentLevel: number;
   gameQuestions: Array<Question> | null;
-  setEarnedAmount: (v: number) => void;
   setCurrentLevel: (v: number) => void;
   setGameQuestions: (q: Array<Question>) => void;
   startGame: () => void;
@@ -24,7 +22,6 @@ interface GameProviderProps {
 const gameDefaults = {
   isGameStarted: false,
   isGameOver: false,
-  earnedAmount: 0,
   currentLevel: 0,
   gameQuestions: null,
 };
@@ -34,7 +31,6 @@ const GameContext = createContext<GameContextType | undefined>(undefined);
 export const GameProvider: React.FC<GameProviderProps> = ({ children }) => {
   const [isGameStarted, setGameStarted] = useState(gameDefaults.isGameStarted);
   const [isGameOver, setIsGameOver] = useState(gameDefaults.isGameOver);
-  const [earnedAmount, setEarnedAmount] = useState(gameDefaults.earnedAmount);
   const [currentLevel, setCurrentLevel] = useState(gameDefaults.currentLevel);
   const [gameQuestions, setGameQuestions] = useState<Array<Question> | null>(
     gameDefaults.gameQuestions,
@@ -51,28 +47,25 @@ export const GameProvider: React.FC<GameProviderProps> = ({ children }) => {
   };
 
   const resetGame = () => {
-    setGameStarted(true);
-    setIsGameOver(gameDefaults.isGameOver);
-    setEarnedAmount(gameDefaults.earnedAmount);
     setCurrentLevel(gameDefaults.currentLevel);
     setGameQuestions(gameDefaults.gameQuestions);
+    setGameStarted(true);
+    setIsGameOver(false);
   };
 
   const value = useMemo(
     () => ({
       isGameStarted,
       isGameOver,
-      earnedAmount,
       currentLevel,
       gameQuestions,
-      setEarnedAmount,
       setCurrentLevel,
       setGameQuestions,
       startGame,
-      endGame,
       resetGame,
+      endGame,
     }),
-    [currentLevel, earnedAmount, gameQuestions, isGameOver, isGameStarted],
+    [currentLevel, gameQuestions, isGameOver, isGameStarted],
   );
 
   return <GameContext.Provider value={value}>{children}</GameContext.Provider>;

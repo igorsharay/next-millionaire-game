@@ -1,7 +1,10 @@
-export const currencyFormat = (sum: number) => {
-  const { format } = new Intl.NumberFormat('en-US', {
+export const currencyFormat = (sum: number, currency: string) => {
+  const contries: { [key: string]: string } = { USD: 'en-US', EUR: 'de-DE' };
+  const contry = contries[currency] || contries.USD;
+
+  const { format } = new Intl.NumberFormat(contry, {
     style: 'currency',
-    currency: 'USD',
+    currency,
     maximumFractionDigits: 0,
   });
 
