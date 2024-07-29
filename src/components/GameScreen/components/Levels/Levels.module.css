@@ -1,7 +1,7 @@
 .levelsListContainer {
   display: flex;
   flex-direction: column;
-  flex-basis: 20vw;
+  /* flex-basis: 20vw; */
   justify-content: center;
   align-items: center;
   background: var(--color-light);
@@ -44,12 +44,6 @@
 
   100% {
     right: -100%;
-  }
-}
-
-@media (max-width: 1200px) {
-  .levelsListContainer {
-    flex-basis: 35vw;
   }
 }
 

@@ -15,7 +15,7 @@
   flex-basis: 35%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .container {
     align-items: stretch;
     gap: 5.6rem;
